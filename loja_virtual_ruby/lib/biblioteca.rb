@@ -9,5 +9,14 @@ class Biblioteca
 		@livros[livro.categoria] ||= []
 		@livros[livro.categoria] << livro
 	end
+
+	def livros
+		@livros.values.flatten
+	end
+
+	def livros_por_categoria(categoria)
+		@livros[categoria]
+	end
+
 	
 end

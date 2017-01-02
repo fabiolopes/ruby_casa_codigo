@@ -3,6 +3,9 @@ class Biblioteca
 
 	def initialize
 		@livros = {}
+		adiciona Livro.new "Testes", '1234', 112, 23, :teste
+		adiciona Livro.new "Design", '4321', 200, 55, :design
+		adiciona Livro.new "Testes", '0090', 512, 53, :teste
 	end
 		
 	def adiciona(livro)
@@ -15,7 +18,9 @@ class Biblioteca
 	end
 
 	def livros_por_categoria(categoria)
-		@livros[categoria]
+		@livros[categoria].each do |livro|
+			yield livro if block_given?
+		end
 	end
 
 	

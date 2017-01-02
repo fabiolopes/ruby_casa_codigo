@@ -3,11 +3,10 @@
 class Livro
 
 	attr_accessor :valor
-	attr_reader :categoria
-	attr_reader :isbn
-	attr_reader :autor
+	attr_reader :categoria, :isbn, :autor, :titulo
 
-	def initialize(autor, isbn = "1", numero_de_paginas, valor, categoria)
+	def initialize(titulo, autor, isbn = "1", numero_de_paginas, valor, categoria)
+		@titulo = titulo
 		@autor = autor
 		@isbn = isbn
 		@numero_de_paginas = numero_de_paginas
@@ -16,7 +15,7 @@ class Livro
 	end
 
 	def to_s
-		"Autor: #{@autor}; ISBN: #{@isbn}; N. páginas: #{@numero_de_paginas}; Valor: #{@valor}; Categoria: #{@categoria}"
+		"Título: #{titulo}; Autor: #{@autor}; ISBN: #{@isbn}; N. páginas: #{@numero_de_paginas}; Valor: #{@valor}; Categoria: #{@categoria}"
 	end
 
 	def eql?(outro_livro)

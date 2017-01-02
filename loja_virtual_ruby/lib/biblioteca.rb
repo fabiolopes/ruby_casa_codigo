@@ -3,9 +3,9 @@ class Biblioteca
 
 	def initialize
 		@livros = {}
-		adiciona Livro.new "Testes", '1234', 112, 23, :teste
-		adiciona Livro.new "Design", '4321', 200, 55, :design
-		adiciona Livro.new "Testes", '0090', 512, 53, :teste
+		adiciona Livro.new "Testes", "Zé Maria" '1234', 112, 23, :teste
+		adiciona Livro.new "Design", "Lula", '4321', 200, 55, :design
+		adiciona Livro.new "Testes", "Ana Julia", '0090', 512, 53, :teste
 	end
 		
 	def adiciona(livro)
